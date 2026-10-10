@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Beyzagül · 2D Oyun Sanatçısı</title>
+  <meta name="description" content="Beyzagül'ün oyun sanatı portfolyosu: karakter, prop, environment, animasyon ve UI/UX çalışmaları.">
+  <meta name="theme-color" content="#1F0F3D">
+  <link rel="icon" type="image/svg+xml" href="img/yer-tutucu/yoldas-kardes.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="sahne">
+
+    <!-- 1) KARŞILAMA -->
+    <section id="ekran-karsilama" class="ekran" aria-label="Karşılama">
+      <header class="logo">
+        <span class="logo-isim"></span>
+        <span class="logo-unvan"></span>
+      </header>
+      <div class="karsilama-icerik">
+        <img class="rehber-buyuk" alt="">
+        <div class="balon balon-buyuk">
+          <span class="balon-isim"></span>
+          <p class="balon-yazi" aria-live="polite"></p>
+          <div class="balon-butonlar">
+            <button type="button" class="btn btn-ikincil" id="btn-gec"></button>
+            <button type="button" class="btn" id="btn-devam"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) KATEGORİ SEÇİMİ -->
+    <section id="ekran-secim" class="ekran" aria-label="Kategori seçimi">
+      <h1 class="ekran-baslik"></h1>
+      <div class="secim-duzen">
+        <div class="onizleme">
+          <div class="onizleme-arka"></div>
+          <img class="onizleme-karakter" alt="">
+          <div class="onizleme-bilgi">
+            <h2 class="onizleme-ad"></h2>
+            <p class="onizleme-aciklama"></p>
+            <ul class="statlar"></ul>
+          </div>
+        </div>
+        <div class="secim-sag">
+          <div class="izgara" role="listbox" aria-label="Kategoriler"></div>
+          <button type="button" class="btn btn-sec"></button>
+        </div>
+      </div>
+      <div class="mini-rehber">
+        <img alt="">
+        <div class="balon balon-mini"><p></p></div>
+      </div>
+    </section>
+
+    <!-- 3) KATEGORİ SAYFASI -->
+    <section id="ekran-kategori" class="ekran" aria-label="Kategori">
+      <header class="kategori-ust">
+        <button type="button" class="btn btn-ikincil btn-geri"></button>
+        <div class="kategori-ust-ic">
+          <img class="kategori-karakter" alt="">
+          <div class="kategori-metin">
+            <h1 class="kategori-ad"></h1>
+            <p class="kategori-aciklama"></p>
+          </div>
+        </div>
+      </header>
+      <div class="galeri"></div>
+    </section>
+  </main>
+
+  <!-- "SEÇİLDİ!" yazısı -->
+  <div class="secildi" aria-hidden="true">
+    <span class="secildi-yazi"></span>
+    <span class="secildi-ad"></span>
+  </div>
+
+  <!-- Büyük görsel penceresi -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-label="Büyük görsel" hidden>
+    <div class="lightbox-kutu">
+      <button type="button" class="btn lightbox-kapat" aria-label="Kapat">✕</button>
+      <button type="button" class="btn lightbox-ok lightbox-onceki" aria-label="Önceki">◀</button>
+      <button type="button" class="btn lightbox-ok lightbox-sonraki" aria-label="Sonraki">▶</button>
+      <div class="lightbox-medya"></div>
+      <div class="lightbox-bilgi">
+        <h3></h3>
+        <p></p>
+        <div class="lightbox-link"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="ayarlar.js"></script>
+  <script src="oyun.js"></script>
+</body>
+</html>
